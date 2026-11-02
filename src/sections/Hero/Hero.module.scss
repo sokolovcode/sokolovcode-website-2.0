@@ -1,0 +1,47 @@
+.hero {
+  display: grid;
+
+  @include mobile-above {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.info,
+.image {
+  @include mobile-above {
+    grid-row: 1;
+  }
+}
+
+.info {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  grid-column: 1;
+  z-index: 2;
+
+  @include mobile-above {
+    padding-left: fluid(34, 1);
+  }
+
+  @include mobile {
+    justify-items: center;
+    padding-top: fluid(100, 80);
+  }
+}
+
+.info,
+.header {
+  row-gap: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.image {
+  grid-column: 1/-1;
+  justify-self: end;
+  mix-blend-mode: lighten;
+}
