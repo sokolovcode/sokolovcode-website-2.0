@@ -1,0 +1,28 @@
+.section {
+  display: grid;
+  justify-content: center;
+  row-gap: var(--section-padding-y);
+
+  &:not(.container) {
+    .header {
+      width: calc(100vw - var(--container-padding-x));
+      justify-self: center;
+    }
+  }
+}
+
+.header {
+  display: grid;
+  justify-content: center;
+  row-gap: 10px;
+  text-align: center;
+}
+
+.title span,
+.description {
+  color: var(--color-gray);
+}
+
+.description {
+  text-wrap: balance;
+}

@@ -1,0 +1,19 @@
+.stack {
+  --stackGap: #{fluid(16, 12)};
+  --stackListTranslateX: -100%;
+  --stackListAnimationDuration: 33s;
+
+  display: grid;
+  row-gap: var(--stackGap);
+}
+
+.wrapper {
+  display: inline-flex;
+  column-gap: var(--stackGap);
+
+  &:nth-child(2) {
+    --stackListTranslateX: 100%;
+
+    justify-content: flex-end;
+  }
+}

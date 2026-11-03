@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Button from "@/components/Button/Button.tsx";
 import { Image } from "@srcset/react";
 import { src, srcSet, placeholder } from "@/assets/images/hero/hero.jpg";
+import { AUTHOR_NAME, AUTHOR_SURNAME } from "@/constants/author.ts";
 
 export default () => {
   const sectionId = 'hero'
@@ -17,11 +18,10 @@ export default () => {
       <div className={styles.info}>
         <header className={styles.header}>
           <h1 className={styles.title} id={titleId}>
-            Я - Frontend-разработчик.
+            Frontend Engineer.
           </h1>
           <h2 className={styles.subtitle}>
-            Привет, меня зовут
-            Александр Соколов.
+            {AUTHOR_NAME} {AUTHOR_SURNAME}.
           </h2>
         </header>
         <Button label='Сверить опыт' />

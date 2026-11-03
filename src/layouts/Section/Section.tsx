@@ -4,21 +4,21 @@ import clsx from "clsx";
 
 type Props = {
   id: string
-  title: string
-  titleId: string
+  title: ReactNode
   description?: string
-  hasContainer: boolean
+  hasContainer?: boolean
   children: ReactNode
 }
 
 export default ({
   id,
   title,
-  titleId,
   description,
   hasContainer = true,
   children,
 }: Props) => {
+  const titleId = `${id}-title`;
+
   return (
     <section
       className={clsx(styles.section, {
@@ -29,7 +29,7 @@ export default ({
     >
       <header className={styles.header}>
         <h2
-          className={styles.title}
+          className={clsx(styles.title, 'h3')}
           id={titleId}
         >
           {title}

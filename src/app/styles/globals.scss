@@ -38,19 +38,19 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  @include fluid-text(74, 40);
+  @include fluid-text(78, 40);
 
   line-height: 90%;
 }
 
 h2, .h2 {
-  @include fluid-text(48, 32);
+  @include fluid-text(58, 32);
 
   line-height: 100%;
 }
 
 h3, .h3 {
-  @include fluid-text(34, 28);
+  @include fluid-text(48, 28);
 }
 
 h4, .h4 {

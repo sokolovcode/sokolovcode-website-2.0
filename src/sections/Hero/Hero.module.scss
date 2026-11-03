@@ -3,6 +3,7 @@
 
   @include mobile-above {
     grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
   }
 }
 
@@ -19,15 +20,6 @@
   align-content: center;
   grid-column: 1;
   z-index: 2;
-
-  @include mobile-above {
-    padding-left: fluid(34, 1);
-  }
-
-  @include mobile {
-    justify-items: center;
-    padding-top: fluid(100, 80);
-  }
 }
 
 .info,
@@ -40,8 +32,14 @@
   flex-direction: column-reverse;
 }
 
+
+.title,
+.subtitle {
+  margin: 0;
+//  line-height: normal;
+}
+
 .image {
   grid-column: 1/-1;
-  justify-self: end;
   mix-blend-mode: lighten;
 }

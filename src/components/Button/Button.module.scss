@@ -1,7 +1,7 @@
 @property --color-button-start {
   syntax: '<color>';
   inherits: false;
-  initial-value: #1f2525;
+  initial-value: #8d8d8d;
 }
 
 @property --color-button-end {
@@ -22,18 +22,19 @@
   color: #fdfdfd;
   background:
     linear-gradient(
-      83.63deg,
-      var(--color-button-start) -2.53%,
-      var(--color-button-end) 41.98%
+      53.63deg,
+      var(--color-button-start) 2.52%,
+      var(--color-button-end) 43.8%
     );
   user-select: none;
   cursor: pointer;
+  box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   transition:
     --color-button-start .3s,
     --color-button-end .3s,
     all .3s;
 
   @include hover {
-    --color-button-end: var(--color-green);
+    --color-button-start: var(--color-black-12);
   }
 }
