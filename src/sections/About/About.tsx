@@ -1,7 +1,7 @@
 import styles from './About.module.scss'
 import clsx from "clsx";
 import { AUTHOR_NAME, AUTHOR_SURNAME } from "@/constants/author.ts";
-import Accordion from "@/components/Accordion/Accordion.tsx";
+import AboutList from "@/sections/About/components/AboutList.tsx";
 
 export default () => {
   const sectionId = 'about'
@@ -39,26 +39,16 @@ export default () => {
         Информация обо мне
       </h2>
       <div className={styles.snapshot}>
-        <picture className={styles.image}></picture>
-        <div className={styles.caption}>
+        <div className={styles.skeleton}>
+          <p className="h5">Загрузка снимка...</p>
+        </div>
+        <div className={clsx(styles.caption, 'h4')}>
           <span>{AUTHOR_NAME}</span>
           <span>{AUTHOR_SURNAME}</span>
         </div>
       </div>
-      <ul className={styles.list}>
-        {aboutItems.map(({ title, description }, index) => (
-          <li className={styles.item} key={title}>
-            <Accordion
-              title={title}
-              id={`information-${index}`}
-              name="info"
-              isOpen={index === 0}
-            >
-              <p>{description}</p>
-            </Accordion>
-          </li>
-        ))}
-      </ul>
+
+      <AboutList items={aboutItems} />
     </section>
   )
 }

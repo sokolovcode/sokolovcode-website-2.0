@@ -1,0 +1,61 @@
+.about {
+  --aboutColumnWidth: 32.5%;
+  --aboutPadding: #{fluid(8, 6)};
+  --aboutListBorder: var(--border-width-s) solid var(--color-gray-90);
+  --aboutTitleHeight: #{fluid(73, 56)};
+
+  display: grid;
+  padding-block: var(--section-padding-y);
+
+  @include tablet {
+    --aboutColumnWidth: 40%;
+  }
+
+  @include mobile-above {
+    grid-template-columns: var(--aboutColumnWidth) 1fr;
+  }
+}
+
+.snapshot {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  row-gap: var(--aboutPadding);
+  padding: var(--aboutPadding);
+  background-color: var(--color-gray-90);
+  overflow: hidden;
+
+  @include mobile-above {
+    min-height: calc(var(--aboutTitleHeight) * 4);
+  }
+}
+
+.skeleton {
+  @include flex-center;
+  background-color: var(--color-black-08);
+
+  @include mobile {
+    height: fluid(420, 320);
+  }
+}
+
+.caption {
+  display: grid;
+  align-content: end;
+  padding-block: fluid(13, 10);
+  color: var(--color-black-08);
+  text-transform: uppercase;
+}
+
+.list {
+  border: var(--aboutListBorder);
+
+  @include mobile-above {
+    border-left: none;
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    border-bottom: var(--aboutListBorder);
+  }
+}

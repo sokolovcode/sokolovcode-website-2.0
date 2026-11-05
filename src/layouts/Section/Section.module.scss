@@ -2,6 +2,7 @@
   display: grid;
   justify-content: center;
   row-gap: var(--section-padding-y);
+  padding-block: var(--section-padding-y);
 
   &:not(.container) {
     .header {

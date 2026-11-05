@@ -9,6 +9,7 @@ type Props = {
   id: string
   name: string
   isOpen: boolean
+  onOpen: () => void
   children: ReactNode
 }
 
@@ -18,6 +19,7 @@ export default ({
   id,
   name,
   isOpen,
+  onOpen,
   children,
 } : Props) => {
   return (
@@ -27,7 +29,13 @@ export default ({
         name={name}
         open={isOpen}
       >
-        <summary className={styles.summary}>
+        <summary
+          className={styles.summary}
+          onClick={(event) => {
+            event.preventDefault()
+            onOpen()
+          }}
+        >
           <h3 className={clsx(styles.title, titleLevelClassName)}>
             <span role="term" aria-details={id}>{title}</span>
             <div className={styles.arrow}>
