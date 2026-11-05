@@ -5,7 +5,7 @@ import clsx from "clsx";
 type Props = {
   id: string
   title: ReactNode
-  description?: string
+  subtitle?: string
   hasContainer?: boolean
   children: ReactNode
 }
@@ -13,7 +13,7 @@ type Props = {
 export default ({
   id,
   title,
-  description,
+  subtitle,
   hasContainer = true,
   children,
 }: Props) => {
@@ -34,9 +34,9 @@ export default ({
         >
           {title}
         </h2>
-        {description && (
-          <div className={styles.description}>
-            <p>{description}</p>
+        {subtitle && (
+          <div className={styles.subtitle}>
+            <p>{subtitle}</p>
           </div>
         )}
       </header>

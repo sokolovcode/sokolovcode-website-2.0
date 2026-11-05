@@ -1,6 +1,7 @@
 import styles from './Stack.module.scss'
 import Section from "@/layouts/Section/Section.tsx";
 import StackList from "@/sections/Stack/components/StackList/StackList.tsx";
+import GradientOverlay from "@/components/GradientOverlay/GradientOverlay.tsx";
 
 export default () => {
   const stackItems = [
@@ -14,12 +15,13 @@ export default () => {
     <Section
       id='stack'
       title={<><span>Стек</span> технологий</>}
-      description='Навыки, которые я применяю для создания современных продуктов.'
+      subtitle='Навыки, которые я применяю для создания современных продуктов.'
       hasContainer={false}
     >
       <div className={styles.stack}>
+        <GradientOverlay position='left'/>
+
         <div className={styles.wrapper}>
-          <StackList items={stackItems} />
           <StackList items={stackItems} />
           <StackList items={stackItems} />
           <StackList items={stackItems} />
@@ -28,8 +30,9 @@ export default () => {
           <StackList items={stackItems} />
           <StackList items={stackItems} />
           <StackList items={stackItems} />
-          <StackList items={stackItems} />
         </div>
+
+        <GradientOverlay position='right'/>
       </div>
     </Section>
   )

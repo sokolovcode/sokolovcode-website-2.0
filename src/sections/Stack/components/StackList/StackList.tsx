@@ -1,4 +1,4 @@
-import styles from './StackList.module.scss';
+import styles from '../../Stack.module.scss'
 
 type Props = {
   items: Array<string>

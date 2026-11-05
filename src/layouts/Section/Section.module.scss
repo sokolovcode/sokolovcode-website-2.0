@@ -3,27 +3,21 @@
   justify-content: center;
   row-gap: var(--section-padding-y);
   padding-block: var(--section-padding-y);
-
-  &:not(.container) {
-    .header {
-      width: calc(100vw - var(--container-padding-x));
-      justify-self: center;
-    }
-  }
 }
 
 .header {
   display: grid;
   justify-content: center;
+  justify-self: center;
   row-gap: 10px;
   text-align: center;
 }
 
 .title span,
-.description {
+.subtitle {
   color: var(--color-gray);
 }
 
-.description {
+.subtitle {
   text-wrap: balance;
 }
