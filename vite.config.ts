@@ -12,7 +12,8 @@ export default defineConfig({
     srcset({
       rules: [{
         width: [1, 0.75, 0.5]
-      }]
+      }],
+      placeholder: true,
     })
   ],
 

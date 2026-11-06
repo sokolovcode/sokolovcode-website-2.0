@@ -1,0 +1,18 @@
+.slider {
+  width: 100vw;
+  overflow: visible;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+
+  :global(.swiper-slide-next) {
+
+  }
+}
+
+.slide {
+//  @include square(245px);
+}
+
