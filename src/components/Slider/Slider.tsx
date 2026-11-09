@@ -40,7 +40,7 @@ export default ({
           slidesPerView: 2.5,
         },
         481: {
-          slidesPerView: 3.5,
+          slidesPerView: 3,
           centeredSlides: true,
         },
         1024: {
@@ -49,6 +49,9 @@ export default ({
         1440: {
           slidesPerView: 7,
         },
+        1921: {
+          slidesPerView: 10,
+        }
       }}
     >
       {Children.map(children, (child, index) => (

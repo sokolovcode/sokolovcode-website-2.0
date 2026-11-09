@@ -5,7 +5,7 @@ import clsx from "clsx";
 type Props = {
   id: string
   title: ReactNode
-  subtitle?: string
+  subtitle?: ReactNode
   hasContainer?: boolean
   children: ReactNode
 }

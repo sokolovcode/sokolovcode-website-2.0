@@ -7,12 +7,29 @@
   display: flex;
   align-items: stretch;
 
-  :global(.swiper-slide-next) {
+//  @include laptop {
+//    margin-block: fluid(50, 20);
+//  }
 
-  }
+//  :global(.swiper-slide-next) {
+//    @include tablet-above {
+//      scale: 1.4;
+//      margin: 0 fluid(65, 35) 0 fluid(45, 25) !important;
+//      z-index: 5;
+//    }
+//  }
+//
+//  :global(.swiper-slide-active) {
+//    @include tablet {
+//      scale: 1.4;
+//      margin: 0 fluid(65, 35) 0 fluid(45, 25) !important;
+//      z-index: 5;
+//    }
+//  }
 }
 
 .slide {
+//  transition: all var(--transition-duration-longer) ease;
 //  @include square(245px);
 }
 

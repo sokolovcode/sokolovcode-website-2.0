@@ -76,6 +76,7 @@ export default () => {
 
             return (
               <a
+                className={styles.link}
                 key={href}
                 href={href}
                 target="_blank"

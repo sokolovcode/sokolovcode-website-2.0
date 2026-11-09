@@ -78,9 +78,9 @@ svg * {
   transition-duration: var(--transition-duration);
 }
 
-//a {
-//  color: inherit;
-//
+a {
+  color: var(--color-white);
+
 //  @include hover {
 //    color: var(--color-white);
 //  }
@@ -88,7 +88,7 @@ svg * {
 //  &[class] {
 //    text-decoration: none;
 //  }
-//}
+}
 
 a,
 button {
