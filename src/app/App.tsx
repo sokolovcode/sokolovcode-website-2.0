@@ -1,5 +1,5 @@
-import Content from "../layouts/Content/Content";
 import './styles'
+import Content from "@/layouts/Content/Content";
 import Hero from "@/sections/Hero/Hero.tsx";
 import Stack from "@/sections/Stack/Stack.tsx";
 import About from "@/sections/About/About.tsx";
@@ -9,10 +9,10 @@ import Experience from "@/sections/Experience/Experience.tsx";
 export default () => {
   return (
     <Content>
-      {/*<Hero />*/}
-      {/*<Stack />*/}
+      <Hero />
+      <Stack />
       <About />
-      {/*<Portfolio />*/}
+      <Portfolio />
       <Experience />
     </Content>
   )

@@ -1,5 +1,10 @@
 .icon {
-  display: inline-flex;
+  display: flex;
   flex-shrink: 0;
   fill: currentColor;
+
+  svg {
+    height: auto;
+    width: 100%;
+  }
 }

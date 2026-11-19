@@ -49,8 +49,8 @@
   column-gap: fluid(10, 6);
 }
 
-.arrow {
-  width: fluid(20, 14);
+.icon {
+  @include square(fluid(20, 15));
 }
 
 .content {

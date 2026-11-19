@@ -2,6 +2,7 @@ import { Image } from '@srcset/react'
 import type { ImageModule } from "@/types/image"
 import styles from '../../Experience.module.scss'
 import Icon from "@/components/Icon/Icon.tsx";
+import clsx from "clsx";
 
 type ExperienceDate = {
   isoDate: string
@@ -32,7 +33,7 @@ export default ({
       <div className={styles.visual}>
         {image && (
           <Image
-            className={styles.image}
+            className={styles.cover}
             src={image.src}
             srcSet={image.srcSet}
             placeholder={image.placeholder}
@@ -49,7 +50,7 @@ export default ({
 
         <div className={styles.title}>
           {logo ? (
-            <Icon name={logo} size={167} title={title} />
+            <Icon className={styles.icon} name={logo} title={title} />
           ) : (
             <span>{title}</span>
           )}
@@ -59,7 +60,7 @@ export default ({
       <div className={styles.content}>
         <div className={styles.inner}>
           <p className={styles.badge}>Должность</p>
-          <h3 className='h5'>{position}</h3>
+          <h3 className={clsx(styles.position, 'h5')}>{position}</h3>
         </div>
 
         <div className={styles.inner}>

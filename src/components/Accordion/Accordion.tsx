@@ -38,9 +38,7 @@ export default ({
         >
           <h3 className={clsx(styles.title, titleLevelClassName)}>
             <span role="term" aria-details={id}>{title}</span>
-            <div className={styles.arrow}>
-              <Icon name="arrow-down" />
-            </div>
+            <Icon className={styles.icon} name="arrow-down" />
           </h3>
         </summary>
       </details>
