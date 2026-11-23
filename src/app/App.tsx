@@ -9,11 +9,11 @@ import Experience from "@/sections/Experience/Experience.tsx";
 export default () => {
   return (
     <Content>
-      <Hero />
-      <Stack />
-      <About />
+      {/*<Hero />*/}
+      {/*<Stack />*/}
+      {/*<About />*/}
       <Portfolio />
-      <Experience />
+      {/*<Exsperience />*/}
     </Content>
   )
 }

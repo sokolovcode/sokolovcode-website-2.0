@@ -7,8 +7,6 @@ type Props = {
 }
 
 export default ({ position, width = '2.29%' }: Props) => {
-
-  console.log(styles)
   return (
     <div
       className={clsx(styles.overlay, styles[position])}

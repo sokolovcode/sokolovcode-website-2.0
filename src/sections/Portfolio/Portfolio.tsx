@@ -3,6 +3,7 @@ import Section from "@/layouts/Section/Section.tsx"
 import Slider from "@/components/Slider/Slider.tsx"
 import { Image } from "@srcset/react"
 import type { ImageModule } from "@/types/image"
+import GradientOverlay from "@/components/GradientOverlay/GradientOverlay.tsx";
 
 const images = import.meta.glob<ImageModule>(
   "/src/assets/images/portfolio/*.jpg",
@@ -70,6 +71,8 @@ export default () => {
       hasContainer={false}
     >
       <div className={styles.portfolio}>
+        <GradientOverlay position='left' width='3%' />
+
         <Slider>
           {portfolioItems.map(({ href, imgSrc, title}) => {
             const { src, srcSet, placeholder } = images[imgSrc]
@@ -93,6 +96,8 @@ export default () => {
             )
           })}
         </Slider>
+
+        <GradientOverlay position='right' width='3%'/>
       </div>
     </Section>
   )
