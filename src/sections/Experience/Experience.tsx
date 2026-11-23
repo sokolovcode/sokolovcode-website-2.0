@@ -53,18 +53,17 @@ export default () => {
       }
     >
       <ul className={styles.list}>
-        {experience.map((item, index) => {
-          const endDate = index === 0
-            ? 'сейчас'
-            : experience[index - 1].date.display
-          return (
-            <ExperienceItem
-              key={index}
-              { ...item }
-              endDate={endDate}
-            />
-          )
-        })}
+        {experience.map((item, index) => (
+          <ExperienceItem
+            key={item.title}
+            {...item}
+            endDate={
+              index === 0
+                ? 'сейчас'
+                : experience[index - 1].date.display
+            }
+          />
+        ))}
       </ul>
     </Section>
   )
