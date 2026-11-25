@@ -1,10 +1,54 @@
 .portfolio {
+  --portfolioSlides: 7;
+  --portfolioColumnGapX: 21px;
+  --portfolioFrameWidth: calc(
+    (100vw - (var(--portfolioSlides) - 1) * var(--portfolioColumnGapX)) /
+    var(--portfolioSlides)
+  );
+
   position: relative;
   padding-block: var(--section-padding-y);
+
+  @media (width > 1920px) {
+    --portfolioSlides: 10;
+  }
+
+  @include tablet {
+    --portfolioSlides: 5;
+  }
+
+  @include mobile {
+    --portfolioSlides: 3;
+  }
+
+  @include mobile-s {
+    --portfolioSlides: 2.5;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: var(--section-padding-y);
+    left: calc(var(--portfolioFrameWidth) + var(--portfolioColumnGapX));
+    width: var(--portfolioFrameWidth);
+    height: calc(100% - var(--section-padding-y) * 2);
+    border: var(--border-width-l) solid var(--color-white);
+    border-radius: var(--border-radius-l);
+    z-index: 5;
+    scale: 1.08;
+
+    @include mobile-s {
+      @include abs-x;
+    }
+  }
+}
+
+.frame {
 }
 
 .link {
 }
 
 .image {
+
 }

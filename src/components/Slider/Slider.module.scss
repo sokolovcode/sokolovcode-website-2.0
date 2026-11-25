@@ -13,23 +13,32 @@
 
 //  :global(.swiper-slide-next) {
 //    @include tablet-above {
-//      scale: 1.4;
-//      margin: 0 fluid(65, 35) 0 fluid(45, 25) !important;
-//      z-index: 5;
+//      scale: 1;
 //    }
 //  }
 //
 //  :global(.swiper-slide-active) {
 //    @include tablet {
-//      scale: 1.4;
-//      margin: 0 fluid(65, 35) 0 fluid(45, 25) !important;
-//      z-index: 5;
+//      scale: 1;
+//    }
+//  }
+
+//  :global(.swiper-slide-next) {
+//    @include tablet-above {
+//      filter: none;
+//    }
+//  }
+//
+//  :global(.swiper-slide-active) {
+//    @include tablet {
+//      filter: none;
 //    }
 //  }
 }
 
 .slide {
-//  transition: all var(--transition-duration-longer) ease;
-//  @include square(245px);
+  border-radius: calc(var(--border-radius-m) - var(--border-width-l));
+  overflow: hidden;
+//  scale: 0.8;
 }
 

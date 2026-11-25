@@ -38,10 +38,10 @@ export default ({
       breakpoints={{
         0: {
           slidesPerView: 2.5,
+          centeredSlides: true,
         },
         481: {
           slidesPerView: 3,
-          centeredSlides: true,
         },
         1024: {
           slidesPerView: 5,
