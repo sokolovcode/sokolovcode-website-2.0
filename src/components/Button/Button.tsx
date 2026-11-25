@@ -1,5 +1,6 @@
 import styles from './Button.module.scss';
 import clsx from "clsx";
+import Icon from "@/components/Icon/Icon.tsx";
 
 type Props = {
   className?: string
@@ -9,6 +10,8 @@ type Props = {
   target?: string
   label?: string
   isLabelHidden?: boolean
+  iconName?: string
+  iconPosition?: 'before' | 'after'
   extraAttrs?: Record<string, string>
 }
 
@@ -20,6 +23,8 @@ export default ({
   target,
   label,
   isLabelHidden = false,
+  iconName,
+  iconPosition = 'before',
   extraAttrs,
 } : Props) => {
   const isLink = href !== undefined
@@ -28,6 +33,13 @@ export default ({
   const buttonProps = { type }
   const specificProps = isLink ? linkProps : buttonProps
   const title = isLabelHidden ? label : undefined
+  const iconComponent = iconName && (
+    <Icon
+      className={styles.icon}
+      name={iconName}
+      title={title}
+    />
+  )
 
   return (
     <Component
@@ -41,9 +53,11 @@ export default ({
       {...specificProps}
       {...extraAttrs}
     >
+      {iconPosition === 'before' && iconComponent}
       {!isLabelHidden && (
         <span className={styles.label}>{label}</span>
       )}
+      {iconPosition === 'after' && iconComponent}
     </Component>
   )
 }

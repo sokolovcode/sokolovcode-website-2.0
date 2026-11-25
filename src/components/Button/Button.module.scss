@@ -14,27 +14,27 @@
   @include flex-center(true);
   @include fluid-text(24, 18);
 
-  padding-block: 16.5px;
-  padding-inline: 75px;
+//  padding-block: 16.5px;
+//  padding-inline: 75px;
   text-align: center;
   border: none;
   border-radius: 100px;
   color: #fdfdfd;
-  background:
-    linear-gradient(
-      53.63deg,
-      var(--color-button-start) 2.52%,
-      var(--color-button-end) 43.8%
-    );
+//  background:
+//    linear-gradient(
+//      53.63deg,
+//      var(--color-button-start) 2.52%,
+//      var(--color-button-end) 43.8%
+//    );
   user-select: none;
   cursor: pointer;
-  box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  transition:
-    --color-button-start .3s,
-    --color-button-end .3s,
-    all .3s;
-
-  @include hover {
-    --color-button-start: var(--color-black-12);
-  }
+//  box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+//  transition:
+//    --color-button-start .3s,
+//    --color-button-end .3s,
+//    all .3s;
+//
+//  @include hover {
+//    --color-button-start: var(--color-black-12);
+//  }
 }
