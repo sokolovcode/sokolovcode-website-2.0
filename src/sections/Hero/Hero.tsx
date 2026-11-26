@@ -26,13 +26,13 @@ export default () => {
         </header>
         <Button label='Сверить опыт' />
       </div>
-      {/*<Image*/}
-      {/*  className={styles.image}*/}
-      {/*  src={src}*/}
-      {/*  srcSet={srcSet}*/}
-      {/*  placeholder={placeholder}*/}
-      {/*  alt=""*/}
-      {/*/>*/}
+      <Image
+        className={styles.image}
+        src={src}
+        srcSet={srcSet}
+        placeholder={placeholder}
+        alt=""
+      />
     </section>
   )
 }

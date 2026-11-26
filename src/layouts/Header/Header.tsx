@@ -46,7 +46,7 @@ export default () => {
                 <a href={href} className={styles.link}>
                   <span className={styles.label}>{label}</span>
                   <Icon
-                    className={iconName}
+                    className={styles.icon}
                     name={iconName}
                   />
                 </a>

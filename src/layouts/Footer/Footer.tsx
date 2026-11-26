@@ -31,7 +31,7 @@ export default () => {
   ]
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="footer">
       <div className={styles.divider}>
         <GradientOverlay position='left' width='50%'/>
         <hr className={styles.hr}/>
