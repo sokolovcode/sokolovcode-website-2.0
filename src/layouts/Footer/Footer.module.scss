@@ -37,15 +37,15 @@
 }
 
 .link {
-  svg {
-    @include square(36px);
-
-    transition-duration: 0.3s;
-  }
-
   @include hover {
-    svg {
+    .icon {
       transform: translateY(-100%);
     }
   }
+}
+
+.icon {
+  @include square(36px);
+
+  transition-duration: 0.3s;
 }

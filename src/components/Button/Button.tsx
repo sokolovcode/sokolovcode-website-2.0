@@ -12,6 +12,7 @@ type Props = {
   isLabelHidden?: boolean
   iconName?: string
   iconPosition?: 'before' | 'after'
+  iconClassName?: string
   extraAttrs?: Record<string, string>
 }
 
@@ -25,6 +26,7 @@ export default ({
   isLabelHidden = false,
   iconName,
   iconPosition = 'before',
+  iconClassName,
   extraAttrs,
 } : Props) => {
   const isLink = href !== undefined
@@ -35,7 +37,7 @@ export default ({
   const title = isLabelHidden ? label : undefined
   const iconComponent = iconName && (
     <Icon
-      className={styles.icon}
+      className={clsx(iconClassName, styles.icon)}
       name={iconName}
       title={title}
     />

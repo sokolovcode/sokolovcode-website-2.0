@@ -14,7 +14,7 @@
       color: var(--color-white);
     }
 
-    .arrow {
+    .icon {
       rotate: 180deg;
     }
   }
@@ -36,8 +36,7 @@
   }
 }
 
-.title,
-.arrow {
+.title {
   transition-duration: var(--transition-duration);
 }
 
@@ -51,6 +50,8 @@
 
 .icon {
   @include square(fluid(20, 15));
+
+  transition-duration: var(--transition-duration-longer);
 }
 
 .content {

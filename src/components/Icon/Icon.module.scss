@@ -2,6 +2,7 @@
   display: flex;
   flex-shrink: 0;
   fill: currentColor;
+  transition-duration: var(--transition-duration);
 
   svg {
     height: auto;

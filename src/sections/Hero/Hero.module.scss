@@ -1,5 +1,6 @@
 .hero {
   display: grid;
+  color: var(--color-black-08);
 
   @include mobile-above {
     grid-template-columns: repeat(2, 1fr);

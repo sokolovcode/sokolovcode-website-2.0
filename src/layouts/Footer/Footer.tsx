@@ -47,6 +47,7 @@ export default () => {
               <li className={styles.item} key={iconName}>
                 <Button
                   className={styles.link}
+                  iconClassName={styles.icon}
                   href={href}
                   target="_blank"
                   label={label}
