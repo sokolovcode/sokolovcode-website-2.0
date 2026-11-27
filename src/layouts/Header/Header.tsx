@@ -1,8 +1,13 @@
 import styles from "./Header.module.scss"
 import Icon from "@/components/Icon/Icon.tsx";
 import BurgerButton from "@/components/BurgerButton/BurgerButton.tsx";
+import ActionButton from "@/components/ActionButton/ActionButton.tsx";
+import clsx from "clsx";
+import { useState } from "react";
 
 export default () => {
+  const [isExpanded, setIsExpanded] = useState<boolean>(true)
+
   const menuItems = [
     {
       label: 'Главная',
@@ -37,25 +42,26 @@ export default () => {
   ]
 
   return (
-    <header className={styles.header}>
-      <dialog className={styles.dialog}>
-        <nav className={styles.menu}>
-          <ul className={styles.list}>
-            {menuItems.map(({ label, href, iconName }) => (
-              <li key={iconName}>
-                <a href={href} className={styles.link}>
-                  <span className={styles.label}>{label}</span>
-                  <Icon
-                    className={styles.icon}
-                    name={iconName}
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </dialog>
-      <BurgerButton className="visible-mobile" />
+    <header className={clsx({
+      [styles.header]: true,
+      [styles.isExpanded]: isExpanded
+    })}>
+      <ActionButton onClick={() => setIsExpanded(false)} />
+      <nav className={styles.menu}>
+        <ul className={styles.list}>
+          {menuItems.map(({ label, href, iconName }) => (
+            <li key={iconName}>
+              <a href={href} className={styles.link}>
+                <span className={styles.label}>{label}</span>
+                <Icon
+                  className={styles.icon}
+                  name={iconName}
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   )
 }

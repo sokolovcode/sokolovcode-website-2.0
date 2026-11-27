@@ -1,6 +1,7 @@
 .portfolio {
-  --portfolioSlides: 7;
+  --portfolioSlides: 2.5;
   --portfolioColumnGapX: 21px;
+
   --portfolioFrameWidth: calc(
     (100vw - (var(--portfolioSlides) - 1) * var(--portfolioColumnGapX)) /
     var(--portfolioSlides)
@@ -9,20 +10,20 @@
   position: relative;
   padding-block: var(--section-padding-y);
 
-  @media (width > 1920px) {
-    --portfolioSlides: 10;
-  }
-
-  @include tablet {
-    --portfolioSlides: 5;
-  }
-
-  @include mobile {
+  @include mobile-s-above {
     --portfolioSlides: 3;
   }
 
-  @include mobile-s {
-    --portfolioSlides: 2.5;
+  @include tablet-above {
+    --portfolioSlides: 5;
+  }
+
+  @media (width >= 1440px) {
+    --portfolioSlides: 7;
+  }
+
+  @media (width > 1920px) {
+    --portfolioSlides: 10;
   }
 
   &::before {
